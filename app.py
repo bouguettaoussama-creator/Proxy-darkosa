@@ -37,3 +37,6 @@ def proxy_chat():
     except requests.exceptions.RequestException as e:
         print(f"Proxy request failed: {e}")
         return jsonify({"error": "Render Proxy Timeout/Fetch Failed", "details": str(e)}), 502
+    except requests.exceptions.RequestException as e:
+        print(f"Proxy request failed: {e}")
+        return jsonify({"error": "Render Proxy Timeout/Fetch Failed", "details": str(e)}), 502
